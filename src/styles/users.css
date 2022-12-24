@@ -34,5 +34,6 @@
     box-shadow: 0 0 5px 5px rgba(211, 211, 211, 0.352);
     transform: translateX(-102%);
     transition: 0.5s all;
+    z-index: 1;
   }
 }
