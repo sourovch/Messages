@@ -1,3 +1,5 @@
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useRef } from 'react';
 import { peoples } from '../../db';
 import '../../styles/users.css';
@@ -25,6 +27,7 @@ function Users({
       <div className="top-bar">
         Logged in as{' '}
         {peoples.find((people) => people.id === senderId).name}
+        <FontAwesomeIcon icon={faXmark} className="x-mark" />
       </div>
       <div className="users-text">peoples</div>
       <ul>

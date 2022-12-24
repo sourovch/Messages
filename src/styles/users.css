@@ -26,6 +26,12 @@
   text-transform: uppercase;
 }
 
+.x-mark {
+  display: none;
+  position: absolute;
+  right: 10px;
+}
+
 @media only screen and (max-width: 1000px) {
   .users-container {
     position: absolute;
@@ -35,5 +41,10 @@
     transform: translateX(-102%);
     transition: 0.5s all;
     z-index: 1;
+  }
+
+  .x-mark {
+    display: inline;
+    cursor: pointer;
   }
 }
