@@ -1,0 +1,126 @@
+.messageBox-container {
+  height: 100%;
+  background-color: var(--color-bg);
+  grid-column-end: span 3;
+}
+
+.messages {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.messages > div {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.messages > div::-webkit-scrollbar {
+  display: none;
+}
+
+.sender-message,
+.reciver-message {
+  display: flex;
+  align-items: center;
+}
+
+.sender-message {
+  justify-content: flex-end;
+}
+
+.reciver-message {
+  justify-content: flex-start;
+}
+
+.sender-message > p,
+.reciver-message > p {
+  display: inline-block;
+  padding: 0.8em 1.2em;
+  margin: 0.2em;
+  border-radius: 10px;
+  max-width: 40%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.sender-message > p {
+  background-color: var(--color-s);
+  color: white;
+}
+
+.reciver-message > p {
+  background-color: lightgray;
+  color: black;
+}
+
+.input-wrapper {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.message-input {
+  width: 90%;
+  height: 40px;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.message-input:focus {
+  outline: 2px solid var(--color-p);
+}
+
+.submit-btn {
+  font-size: 1.5rem;
+  padding: 0 0.5em;
+  transition: all 0.5s;
+}
+
+.submit-btn:hover {
+  color: var(--color-p);
+}
+
+.switch-btn {
+  display: none;
+  font-size: 1.1rem;
+  margin-right: 4px;
+}
+
+.page-switch {
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  right: 10px;
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .messageBox-container {
+    grid-column-end: span 1;
+  }
+
+  .switch-btn {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .hide-cont {
+    position: absolute;
+    width: 100%;
+    transform: translateX(-110%);
+    transition: 0.5s all;
+    box-shadow: 0 0 5px 5px rgba(211, 211, 211, 0.352);
+  }
+
+  .page-switch {
+    display: inline;
+  }
+}

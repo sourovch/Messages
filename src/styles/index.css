@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+:root {
+  --color-bg: #efe9f4;
+  --color-p: #79addc;
+  --color-s: #6aa0cf;
+}
+
+/* global classses */
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.top-bar {
+  padding: 1em;
+  font-size: 1.2rem;
+  background-color: var(--color-p);
+  color: white;
+  box-shadow: 0px 5px 10px -2px lightgray;
+  position: relative;
+}
+
+.active {
+  transform: translateX(0);
+}
