@@ -20,9 +20,7 @@ function Users({
     <div
       className="users-container"
       ref={userRef}
-      onClick={() => {
-        switchBtnClk(userRef.current);
-      }}
+      onClick={() => switchBtnClk(userRef.current)}
     >
       <div className="top-bar">
         Logged in as{' '}
@@ -36,10 +34,7 @@ function Users({
             people.id !== senderId && (
               <li
                 key={people.id}
-                onClick={() => {
-                  setReceiverId(people.id);
-                  switchBtnClk();
-                }}
+                onClick={() => setReceiverId(people.id)}
               >
                 {people.name}
               </li>

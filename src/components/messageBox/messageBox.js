@@ -69,9 +69,7 @@ function MessageBox({
         {mainbox && (
           <button
             className="btn switch-btn"
-            onClick={() => {
-              switchBtnClk(usersRef.current);
-            }}
+            onClick={() => switchBtnClk(usersRef.current)}
           >
             <FontAwesomeIcon icon={faRepeat} />
           </button>
@@ -79,9 +77,7 @@ function MessageBox({
         {reciver.name}
         <button
           className="btn page-switch"
-          onClick={() => {
-            switchBtnClk(hidMsgBoxRef.current);
-          }}
+          onClick={() => switchBtnClk(hidMsgBoxRef.current)}
         >
           Other side
         </button>
@@ -113,9 +109,7 @@ function MessageBox({
       <form
         className="message-form"
         autoComplete="off"
-        onSubmit={(e) => {
-          submitHandler(e, messages);
-        }}
+        onSubmit={(e) => submitHandler(e, messages)}
       >
         <div className="input-wrapper">
           <input
